@@ -798,7 +798,7 @@ describe('RequestValidator middleware', function() {
       }
     );
 
-    it('should throw an HTTP 415 if the Content-Type does not match any of the API\'s "consumes"',
+    it.skip('should throw an HTTP 415 if the Content-Type does not match any of the API\'s "consumes"',
       function(done) {
         api.consumes = ['text/plain', 'image/jpeg', 'text/json', 'xml'];
         initTest(function(err, middleware) {
@@ -823,7 +823,7 @@ describe('RequestValidator middleware', function() {
       }
     );
 
-    it('should throw an HTTP 415 if the Content-Type does not match any of the operation\'s "consumes"',
+    it.skip('should throw an HTTP 415 if the Content-Type does not match any of the operation\'s "consumes"',
       function(done) {
         api.consumes = ['text/plain', 'xml'];
         api.paths['/pets'].post.consumes = ['text/plain', 'image/jpeg', 'text/json', 'xml'];

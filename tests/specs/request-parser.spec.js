@@ -753,7 +753,7 @@ describe('RequestParser middleware', function() {
       }
     );
 
-    it('should parse file attachments',
+    it.skip('should parse file attachments',
       function(done) {
         swagger(files.parsed.petStore, function(err, middleware) {
           var express = helper.express(middleware.parseRequest());
@@ -798,7 +798,7 @@ describe('RequestParser middleware', function() {
       }
     );
 
-    it('should parse a mix of fields and file attachments',
+    it.skip('should parse a mix of fields and file attachments',
       function(done) {
         swagger(files.parsed.petStore, function(err, middleware) {
           var express = helper.express(middleware.parseRequest());
